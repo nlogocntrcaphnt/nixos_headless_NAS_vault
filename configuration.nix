@@ -78,7 +78,7 @@
 		autologinOnce = true;
 	};
 	environment.loginShellInit = ''
-	[[ "$(tty)" == /dev/ttyl ]] & sway
+	[[ "$(tty)" == /dev/ttyl ]]
 	'';
 
 	security = {
@@ -124,34 +124,7 @@
 
 	hardware.logitech.wireless.enable = true;
 	hardware.logitech.wireless.enableGraphical = true;
-
-	programs.sway = {
-		enable = true;
-		wrapperFeatures.gtk = true;
-		extraPackages = with pkgs; [
-			wl-clipboard
-			mako
-			i3status
-			libinput
-			grim
-			slurp
-						
-			foot
-
-			wmenu
-			dmenu
-		];
-		extraSessionCommands = ''
-			export SDL_VIDEODRIVER=wayland
-			export QT_QPA_PLATFORM=wayland
-			export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
-			export _JAVA_AWT_WM_NONREPARENTING=1
-			export MOZ_ENABLE_WAYLAND=1
-		'';
-	};
-
-	programs.xwayland.enable = true;
-		
+	
 	services.pcscd.enable = true;
 	programs.gnupg.agent = {
 		enable = true;
@@ -231,11 +204,6 @@
 	# List packages installed in system profile. To search, run:
 	# $ nix search wget
 	environment.systemPackages = with pkgs; [
-		firefox
-
-		pcmanfm
-		ffmpegthumbnailer
-
 		neovim
 		git
 		gnumake
@@ -244,11 +212,6 @@
 		killall
 
 		rsync
-
-		yt-dlp
-		aria2
-
-		mpv
 
 		htop
 		lm_sensors
@@ -262,11 +225,6 @@
 		smartmontools
 
 		gnupg
-
-		ffmpeg-full
-		alsa-utils
-
-		rtorrent
 
 		fastfetch
 	];
