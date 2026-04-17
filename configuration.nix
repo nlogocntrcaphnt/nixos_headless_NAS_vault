@@ -152,13 +152,13 @@
 
 	fileSystems."/export/1TB_vault" = {
 		device = "/mnt/1TB_vault";
-		fsType = "ext4"
+		fsType = "ext4";
 		options = [ "bind" ];
 	};
 
 	fileSystems."/export/500GB_vault" = {
 		device = "/mnt/500GB_vault";
-		fsType = "ext4"
+		fsType = "ext4";
 		options = [ "bind" ];
 	};
 
