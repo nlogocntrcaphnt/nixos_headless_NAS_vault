@@ -208,9 +208,6 @@
 		neovim
 		git
 		gnumake
-		gedit
-		
-		killall
 
 		rsync
 
@@ -224,6 +221,10 @@
 		parted
 		btrfs-progs
 		smartmontools
+
+		wget
+
+		ollama
 
 		gnupg
 
