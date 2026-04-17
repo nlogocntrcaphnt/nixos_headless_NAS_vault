@@ -152,11 +152,13 @@
 
 	fileSystems."/export/1TB_vault" = {
 		device = "/mnt/1TB_vault";
+		fsType = "ext4"
 		options = [ "bind" ];
 	};
 
 	fileSystems."/export/500GB_vault" = {
 		device = "/mnt/500GB_vault";
+		fsType = "ext4"
 		options = [ "bind" ];
 	};
 
@@ -182,6 +184,7 @@
 	
 	networking.firewall.extraCommands = ''
 		iptables -A nixos-fw -p tcp --source 192.168.1.200 --dport 5432 -j nixos-fw-accept
+		iptables -A nixos-fw -p tcp --source 192.168.1.200 --dport 11434 -j nixos-fw-accept
 	'';
 
 	services.openssh = {
