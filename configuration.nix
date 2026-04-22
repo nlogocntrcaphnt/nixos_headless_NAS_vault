@@ -228,6 +228,7 @@
 		wget
 
 		ollama
+		opencode
 
 		gnupg
 
