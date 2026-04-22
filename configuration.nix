@@ -162,12 +162,19 @@
 		options = [ "bind" ];
 	};
 
+	fileSystems."/export/Documents" = {
+		device = "/home/erysichthon/Documents";
+		fsType = "ext4";
+		options = [ "bind" ];
+	}
+
 	services.nfs.server = {
 		enable = true;
 		exports = ''
     		/export         192.168.1.200(rw,fsid=0,no_subtree_check)
     		/export/1TB_vault  192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
 		/export/500GB_vault     192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
+		/export/Documents     192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
   '';
 		# fixed rpc.statd port; for firewall
 #		lockdPort = 4001;
