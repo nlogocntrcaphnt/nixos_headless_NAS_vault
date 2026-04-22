@@ -166,7 +166,7 @@
 		device = "/home/erysichthon/Documents";
 		fsType = "ext4";
 		options = [ "bind" ];
-	}
+	};
 
 	services.nfs.server = {
 		enable = true;
