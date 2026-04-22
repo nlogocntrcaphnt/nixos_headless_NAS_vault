@@ -162,8 +162,8 @@
 		options = [ "bind" ];
 	};
 
-	fileSystems."/export/Documents" = {
-		device = "/home/erysichthon/Documents";
+	fileSystems."/export/llm_projects" = {
+		device = "/home/erysichthon/Documents/llm_projects";
 		fsType = "ext4";
 		options = [ "bind" ];
 	};
@@ -174,7 +174,7 @@
     		/export         192.168.1.200(rw,fsid=0,no_subtree_check)
     		/export/1TB_vault  192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
 		/export/500GB_vault     192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
-		/export/Documents     192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
+		/export/llm_projects     192.168.1.200(rw,nohide,insecure,no_subtree_check,no_root_squash)
   '';
 		# fixed rpc.statd port; for firewall
 #		lockdPort = 4001;
